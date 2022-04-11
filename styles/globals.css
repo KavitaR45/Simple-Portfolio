@@ -4,6 +4,7 @@ body {
   margin: 0;
   background:#0A192F !important;
   overflow-x: hidden;
+  height: max-content !important;
 }
 body{
   padding: 0 180px;

@@ -1,10 +1,39 @@
 import React from "react"
+import styled from "styled-components"
 
-export default function SectionHeading({ title, tagline }) {
+export default function SectionHeading({ title,section }) {
+
+    const Title = styled.h2`
+    margin-bottom:30px;
+    &::before {
+      position: relative;
+      bottom: 4px;
+      counter-increment: section ${section};
+      content: "0" counter(section) ".";
+      margin-right: 10px;
+      color: #64ffda;
+      font-weight: 400;
+  }
+  &::after{
+      content: "";
+      display: block;
+      position: relative;
+      top: -10px;
+      width: 300px;
+      left:190px;
+      height: 1px;
+      margin-left: 20px;
+      background-color: #233554;
+  }
+  @media(max-width:576px){
+    &::after{
+        width: 100px;
+        left:150px;
+    } 
+  }
+    `
+
     return (
-        <div className="container">
-            <h2 className="text-white text-center">{title}</h2>
-            <p className="text-white text-center">{tagline}</p>
-        </div>
+        <Title className="heading-text numbered-heading">{title}</Title>
     )
 }
