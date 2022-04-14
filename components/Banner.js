@@ -1,6 +1,5 @@
 import React from "react"
 import { Row, Col, Button} from "antd"
-import {FaPlay} from "react-icons/fa"
 import styled from "styled-components"
 
 export default function Banner({title,desc,btnLink,btnText,subtitle}) {
