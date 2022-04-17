@@ -40,6 +40,10 @@ export default function Project({ subtitle, title, desc, img, flexDirection, tex
     background-color:#0a192f;
     mix-blend-mode: screen;
  }
+ &::before:hover{
+    background-color:transparent;
+    mix-blend-mode: none;
+ }
  img{
     filter: grayscale(100%) contrast(1) brightness(90%);
     mix-blend-mode: multiply;
@@ -47,10 +51,10 @@ export default function Project({ subtitle, title, desc, img, flexDirection, tex
  }
  img:hover{
     filter: none;
-    mix-blend-mode: multiply;
+    mix-blend-mode: none;
     width:100%;
  }
-  @media(max-width:576px){
+  @media(max-width:992px){
       width:100%;
       display:block;
       margin:20px auto 0 auto;
@@ -58,27 +62,27 @@ export default function Project({ subtitle, title, desc, img, flexDirection, tex
   }
   `
     const RowWrapper = styled(Row)`
-  margin:50px 0;
-  @media(max-width:576px){
+  margin:80px 0;
+  @media(max-width:992px){
       margin:10px 0;
   }
   `
 
 
     return (
-        <>
+        <a href="#">
             <RowWrapper gutter={4} justify="space-around" align="middle" style={{ flexDirection: `${flexDirection ? "row-reverse" : "row"}` }}>
-                <Col style={{ margin: "20px 0" }} xs={24} sm={12} lg={12}>
+                <Col style={{ margin: "20px 0" }} xs={21} sm={22} lg={12}>
                     <Img><img src={img} /> </Img>
                 </Col>
-                <Col xs={22} sm={12} lg={12} style={{ textAlign: `${textAlign ? "left" : "right"}`, margin: "20px 0", zIndex: "5", position: "relative" }}>
+                <Col xs={21} sm={22} lg={12} style={{ textAlign: `${textAlign ? "left" : "right"}`, margin: "20px 0", zIndex: "5", position: "relative" }}>
                     <p style={{ color: "#64ffda", marginBottom: "5px" }}>{subtitle}</p>
                     <Title>{title}</Title>
                     <DescSection className="para-text">{desc}</DescSection>
                     <p className="para-text">{technology}</p>
                 </Col>
             </RowWrapper>
-        </>
+        </a>
 
     )
 }

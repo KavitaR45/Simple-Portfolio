@@ -50,18 +50,18 @@ export default function Contact({ desc, }) {
 
     return (
         <>
-            <Row gutter={4} justify="space-around" align="center">
-                <Col xs={24} sm={14} lg={14}>
+            <Row className="desktop-space-between" gutter={4} justify="space-between" align="center">
+                <Col xs={21} sm={12} lg={12}>
                     <DescSection className="para-text">{desc}</DescSection>
                 </Col>
-                <Col xs={24} sm={10} lg={10}>
+                <Col xs={21} sm={10} lg={10}>
                     <Form id="myForm" netlify="true" name="contactForm" method="POST" data-netlify="true" >
                         <input type="hidden" name="form-name" value="contactForm" />
                         <input title="Name should not contains any numeric letters" pattern="[A-Za-z ]{1,32}" placeholder="Name" label="Name" type="text" name="name" required />
                         <input title="Please enter a valid email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" label="Email" type="mail" name="email" required />
                         <input pattern="^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$" title="Please enter a valid phone number" placeholder="Mobile Number" label="Mobile Number" type="tel" name="phone" required />
                         <textarea placeholder="Message" label="Message" type="text" name="msg" required></textarea>
-                        <Button type="ghost">Submit</Button>
+                        <Button type="ghost" style={{marginTop:"15px"}}>Submit</Button>
                     </Form>
                 </Col>
             </Row>

@@ -15,6 +15,9 @@ export default function SectionHeading({ title,section }) {
       font-weight: 600;
       font-size:2.2rem;
   }
+  @media(max-width:576px){
+      margin-left:25px;
+  }
 //   &::after{
 //       content: "";
 //       display: block;

@@ -2,28 +2,37 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background:#0A192F !important;
+  background: #0A192F !important;
   overflow-x: hidden;
   height: max-content !important;
 }
-body{
-  padding: 0 180px;
+
+body section {
+  padding-right: 180px !important;
+  padding-left: 180px !important;
 }
-@media (max-width:1204px){
-  body{
-  padding: 0 50px;
+
+@media (max-width:1204px) {
+  body section {
+    padding-right: 50px !important;
+    padding-left: 50px !important;
   }
 }
-@media (max-width:992px){
-  body{
-  padding: 0 40px;
+
+@media (max-width:992px) {
+  body section {
+    padding-right: 40px !important;
+    padding-left: 40px !important;
   }
 }
-@media (max-width:567px){
-  body{
-  padding: 0 25px;
+
+@media (max-width:567px) {
+  body section {
+    padding-right: 25px !important;
+    padding-left: 25px !important;
   }
 }
+
 a {
   color: inherit;
   text-decoration: none;

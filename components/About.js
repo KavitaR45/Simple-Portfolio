@@ -34,11 +34,11 @@ export default function About({title,desc,img,num}) {
   
   return (
     <>
-        <Row  gutter={4} justify="space-around" align="start">
-          <Col xs={24} sm={16} lg={16}>
+        <Row className="desktop-space-between" gutter={4} justify="space-between" align="start">
+          <Col xs={21} sm={16} lg={16}>
             <DescSection className="para-text">{desc}</DescSection>
          </Col>
-          <Col xs={22} sm={7} lg={7}>
+          <Col xs={21} sm={7} lg={7}>
            <Img src={img}  />
           </Col>
         </Row>

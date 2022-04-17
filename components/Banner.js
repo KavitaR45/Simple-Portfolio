@@ -2,13 +2,25 @@ import React from "react"
 import { Row, Col, Button} from "antd"
 import styled from "styled-components"
 
-export default function Banner({title,desc,btnLink,btnText,subtitle}) {
+export default function Banner({title,desc,btnLink,btnText,subtitle,subheading}) {
  
   const Section = styled.section`
-  height:100vh;
+  height:80vh;
   `
   const RowWrapper = styled(Row)`
   height:100%;
+  h2{
+    font-size: 7rem;
+    color:#8892b0;
+  }
+  @media(max-width:576px){
+    justify-content:center;
+    align-content:center;
+    h2{
+      font-size: 4rem;
+      line-height:4.3rem;
+    }
+  }
   `
   const DescSection = styled.p`
   max-width:600px;
@@ -21,10 +33,11 @@ export default function Banner({title,desc,btnLink,btnText,subtitle}) {
     <>
       {/* Banner Section */}
       <Section >
-        <RowWrapper  gutter={4} justify="start" align="middle">
-          <Col xs={24} sm={15} lg={15}>
+        <RowWrapper  gutter={4} justify="start" align="start">
+          <Col xs={21} sm={22} lg={22}>
             <p className="text-primary" style={{letterSpacing:"2.25px"}}>{subtitle}</p>
             <h1 className="heading-text">{title}</h1>
+            <h2 className="heading-text">{subheading}</h2>
             <DescSection className="para-text">{desc}</DescSection>
             <Button type="ghost" size="large" href={btnLink} style={{marginTop:"15px"}}>{btnText}</Button>
           </Col>
