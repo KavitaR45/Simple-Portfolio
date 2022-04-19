@@ -2,7 +2,7 @@ import React from "react"
 import { Row, Col, Button } from "antd"
 import styled from "styled-components"
 
-export default function Project({ subtitle, title, desc, img, flexDirection, textAlign, technology }) {
+export default function Project({link, subtitle, title, desc, img, flexDirection, textAlign, technology }) {
 
 
     const DescSection = styled.p`
@@ -40,18 +40,13 @@ export default function Project({ subtitle, title, desc, img, flexDirection, tex
     background-color:#0a192f;
     mix-blend-mode: screen;
  }
- &::before:hover{
-    background-color:transparent;
-    mix-blend-mode: none;
+ &:hover::before{
+    background-color:transparent !important;
+    mix-blend-mode: none !important;
  }
- img{
-    filter: grayscale(100%) contrast(1) brightness(90%);
+ .img-class{
+    filter: grayscale(30%) contrast(1) brightness(90%);
     mix-blend-mode: multiply;
-    width:100%;
- }
- img:hover{
-    filter: none;
-    mix-blend-mode: none;
     width:100%;
  }
   @media(max-width:992px){
@@ -70,10 +65,10 @@ export default function Project({ subtitle, title, desc, img, flexDirection, tex
 
 
     return (
-        <a href="#">
+        <a href={link} target="_blank">
             <RowWrapper gutter={4} justify="space-around" align="middle" style={{ flexDirection: `${flexDirection ? "row-reverse" : "row"}` }}>
                 <Col style={{ margin: "20px 0" }} xs={21} sm={22} lg={12}>
-                    <Img><img src={img} /> </Img>
+                    <Img><img className="img-class" src={img} /> </Img>
                 </Col>
                 <Col xs={21} sm={22} lg={12} style={{ textAlign: `${textAlign ? "left" : "right"}`, margin: "20px 0", zIndex: "5", position: "relative" }}>
                     <p style={{ color: "#64ffda", marginBottom: "5px" }}>{subtitle}</p>

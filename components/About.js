@@ -20,14 +20,37 @@ export default function About({title,desc,img,num}) {
       width:45%;
   }
   `
-  const Img = styled.img`
+  
+  const Img = styled.div`
   width:100%;
   border-radius:4px;
-  @media(max-width:576px){
-      width:70%;
+  position:relative;
+ background:#64ffda;
+ :hover{
+     background:white !important;
+ }
+ &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0px;
+    z-index: 3;
+    background-color:#0a192f;
+    mix-blend-mode: screen;
+ }
+ &:hover::before{
+    background-color:transparent !important;
+    mix-blend-mode: none !important;
+ }
+ .img-class{
+    filter: grayscale(30%) contrast(1) brightness(90%);
+    mix-blend-mode: multiply;
+    width:100%;
+ }
+  @media(max-width:992px){
       display:block;
       margin:20px auto 0 auto;
-      
   }
   `
  
@@ -39,7 +62,7 @@ export default function About({title,desc,img,num}) {
             <DescSection className="para-text">{desc}</DescSection>
          </Col>
           <Col xs={21} sm={7} lg={7}>
-           <Img src={img}  />
+          <Img><img className="img-class" src={img} /> </Img>
           </Col>
         </Row>
     </>

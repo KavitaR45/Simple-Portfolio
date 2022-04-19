@@ -50,7 +50,7 @@ export default function Contact({ desc, }) {
 
     return (
         <>
-            <Row className="desktop-space-between" gutter={4} justify="space-between" align="center">
+            <Row className="desktop-space-between" gutter={4} justify="space-between" align="middle">
                 <Col xs={21} sm={12} lg={12}>
                     <DescSection className="para-text">{desc}</DescSection>
                 </Col>

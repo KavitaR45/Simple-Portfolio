@@ -1,4 +1,5 @@
 import React from "react"
+import {Row,Col} from "antd"
 import {FiLinkedin,FiGithub} from "react-icons/fi"
 import styled from "styled-components"
 
@@ -74,6 +75,9 @@ display:none !important;
                         <a href="https://github.com/KavitaR45/"><FiGithub style={{marginBottom:"8px",fontSize:"2.25rem"}}/></a>
                     </EmailDiv>
                 </SideDivLeft>
+                {/* <Row justify="center" align="middle">
+                    <Col style={{color:"#8892b0"}}>Developed by Kavita Rawat</Col>
+                </Row> */}
             </Section>
         </>
 

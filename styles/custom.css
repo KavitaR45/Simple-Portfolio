@@ -43,6 +43,11 @@ button {
     justify-content: center !important;
   }
 }
+@media(min-width:992px){
+  .mobile-menu{
+    display: none !important;
+  }
+}
 button{
     display: flex !important;
     align-items: center;
@@ -83,8 +88,17 @@ body::-webkit-scrollbar-thumb {
 .text-center{
   text-align: center;
 }
-.text-white{
-  color:white;
+.text-white,.ant-drawer-close{
+  color:white !important;
+}
+.ant-drawer-content{
+  background: #0A192F !important;
+  color:white !important;
+}
+a.ant-btn {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  height: max-content !important;
 }
 ul{
   padding: 0px;

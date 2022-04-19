@@ -39,7 +39,7 @@ export default function Banner({title,desc,btnLink,btnText,subtitle,subheading})
             <h1 className="heading-text">{title}</h1>
             <h2 className="heading-text">{subheading}</h2>
             <DescSection className="para-text">{desc}</DescSection>
-            <Button type="ghost" size="large" href={btnLink} style={{marginTop:"15px"}}>{btnText}</Button>
+            <Button type="ghost" size="large" target={"_blank"} href={btnLink} style={{marginTop:"15px"}}>{btnText}</Button>
           </Col>
         </RowWrapper>
         
