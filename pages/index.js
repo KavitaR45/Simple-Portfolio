@@ -1,5 +1,4 @@
 import React from "react"
-import Head from "next/head"
 import Banner from "../components/Banner"
 import SectionHeading from "../components/SectionHeading"
 import About from "../components/About"
@@ -11,9 +10,6 @@ import Header from "../components/Header"
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Kavita Rawat</title>
-      </Head>
       <Header/>
       {/* Banner Section */}
       <Banner subheading={"I build things for the web."} subtitle={"Hi, my  name  is"} title={"Kavita Rawat."} desc={"I’m a FrontEnd Developer specializing in building (and occasionally designing) exceptional digital experiences with technologies like ReactJs, Gatsby, NextJs, Wordpress and Woocommerce"} btnText="Download Resume" btnLink={"/images/Resume.pdf"} />
