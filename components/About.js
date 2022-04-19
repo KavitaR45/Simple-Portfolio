@@ -62,7 +62,7 @@ export default function About({title,desc,img,num}) {
             <DescSection className="para-text">{desc}</DescSection>
          </Col>
           <Col xs={21} sm={7} lg={7}>
-          <Img><img className="img-class" src={img} /> </Img>
+          <Img><img className="img-class" src={img} alt="profile-pic" /> </Img>
           </Col>
         </Row>
     </>

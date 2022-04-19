@@ -22,7 +22,7 @@ export default function Header({ }) {
   }
   `
     const ColWrap = styled(Col)`
-  display:flex;
+  display:flex !important;
   width:100%;
   justify-content:space-around;
   a{
@@ -37,7 +37,7 @@ export default function Header({ }) {
       font-size:1.5rem;
   }
   @media(max-width:992px){
-      display:none;
+      display:none !important;
   }
   `
   const RowWrap = styled(Row)`
@@ -64,7 +64,7 @@ margin:20px auto;
             <Section >
                 <Row justify="space-between" align="middle">
                     <Col span={4}>
-                        <img style={{ width: "40px", position: "relative" }} src="/images/logo.svg" />
+                        <img style={{ width: "40px", position: "relative" }} alt="logo" src="/images/logo.svg" />
                     </Col>
                     <ColWrap lg={6} md={8} sm={0} xs={0}>
                         <a href="#about"><span>01.</span> About</a>

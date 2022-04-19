@@ -68,7 +68,7 @@ export default function Project({link, subtitle, title, desc, img, flexDirection
         <a href={link} target="_blank">
             <RowWrapper gutter={4} justify="space-around" align="middle" style={{ flexDirection: `${flexDirection ? "row-reverse" : "row"}` }}>
                 <Col style={{ margin: "20px 0" }} xs={21} sm={22} lg={12}>
-                    <Img><img className="img-class" src={img} /> </Img>
+                    <Img><img className="img-class" alt="project-img" src={img} /> </Img>
                 </Col>
                 <Col xs={21} sm={22} lg={12} style={{ textAlign: `${textAlign ? "left" : "right"}`, margin: "20px 0", zIndex: "5", position: "relative" }}>
                     <p style={{ color: "#64ffda", marginBottom: "5px" }}>{subtitle}</p>
