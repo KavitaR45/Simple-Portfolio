@@ -22,14 +22,14 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html lang='en'>
-        <Head>
+        <head>
           <title>Kavita Rawat - Personal Portfolio</title>
           <meta name="description" content="I’m a FrontEnd Developer specializing in building exceptional digital experiences with technologies like ReactJs, Gatsby, NextJs, Wordpress and Woocommerce" />
           <link rel="icon" href="/images/logo.svg" />
           <link rel="canonical" href="https://kavita-portfolio.netlify.app/" />
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
-        </Head>
+        </head>
         <body>
           <Main />
           <NextScript />
