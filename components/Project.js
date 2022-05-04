@@ -13,9 +13,9 @@ export default function Project({link, subtitle, title, desc, img, flexDirection
   color:white;
   `
     const Title = styled.h3`
-    color: white ;
+    color: #ffd234 !important;
      font-size: 2.8rem;
-      font-weight: 700;
+      font-weight: 900;
     :hover{
         // color:#64ffda;
         cursor:pointer
@@ -31,7 +31,7 @@ export default function Project({link, subtitle, title, desc, img, flexDirection
     width:75%;
   }
   @media(max-width:576px){
-    width:50%;
+    width:70%;
   }
   .img-class{
     border-radius:4px;
@@ -43,24 +43,26 @@ export default function Project({link, subtitle, title, desc, img, flexDirection
   `
     const RowWrapper = styled(Row)`
   height:100%;
-  @media(max-width:992px){
-      margin:10px 0;
-  }
   color:white;
+  @media(max-width:992px){
+      .mobile-text-center{
+          text-align:center !important;
+      }
+  }
   `
 
 
     return (
-        <a href={link} target="_blank" style={{height:"100%"}}>
-            <RowWrapper gutter={4} justify="center" align="middle" style={{ flexDirection: `${flexDirection ? "row-reverse" : "row"}` }}>
-                <Col style={{ margin: "20px 0" }} xs={21} sm={22} lg={12}>
+        <a href={link ? link :"#"} target="_blank" style={{height:"100%"}}>
+            <RowWrapper gutter={4} justify="center" align="middle" style={{ flexDirection: `${flexDirection ? "row-reverse" : "row"}` ,alignContent:"center"}}>
+                <Col xs={21} sm={22} lg={12}>
                     <Img src={img}/>
                 </Col>
-                <Col xs={21} sm={22} lg={10} style={{ textAlign: `${textAlign ? "left" : "right"}`, margin: "20px 0", zIndex: "5", position: "relative" }}>
+                <Col className="mobile-text-center" xs={21} sm={22} lg={10} style={{ textAlign: `${textAlign ? "left" : "right"}`, margin: "20px 0", zIndex: "5", position: "relative" }}>
                     <p style={{ color: "white", marginBottom: "5px" }}>{subtitle}</p>
                     <Title>{title}</Title>
                     <DescSection>{desc}</DescSection>
-                    <p>{technology}</p>
+                    <p style={{color:" #ffd234 !important"}}>{technology}</p>
                 </Col>
             </RowWrapper>
         </a>

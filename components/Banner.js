@@ -63,7 +63,7 @@ export default function Banner({ title, desc, btnLink, btnText, subtitle, subhea
             </RevealContent>
           </Col>
           <Col xs={21} sm={12} lg={12}>
-            <RevealImg Variant="Variant3">
+            <RevealImg Variant="Variant1">
               <Image src={img}  />
             </RevealImg>
           </Col>

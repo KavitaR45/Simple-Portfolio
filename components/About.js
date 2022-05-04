@@ -86,7 +86,7 @@ export default function About({ title, desc, img, num, }) {
           </RevealContent>
         </Col>
         <Col xs={21} sm={12} lg={8}>
-          <RevealImg Variant="Variant3">
+          <RevealImg Variant="Variant1">
             <Img src={img} alt="profile-pic" />
           </RevealImg>
         </Col>
