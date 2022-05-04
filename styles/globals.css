@@ -2,9 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: #0A192F !important;
   overflow-x: hidden;
   height: max-content !important;
+  color:white !important;
 }
 
 body section {

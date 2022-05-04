@@ -5,16 +5,18 @@ export default function SectionHeading({ title,section }) {
 
     const Title = styled.h2`
     margin-bottom:30px;
-    &::before {
-      position: relative;
-      bottom: 0px;
-      counter-increment: section ${section};
-      content: "0" counter(section) ".";
-      margin-right: 10px;
-      color: #64ffda;
-      font-weight: 600;
-      font-size:2.2rem;
-  }
+    position:relative;
+    font-weight:bolder;
+//     &::before {
+//       position: relative;
+//       bottom: 0px;
+//       counter-increment: section ${section};
+//       content: "0" counter(section) ".";
+//       margin-right: 10px;
+//       color: white;
+//       font-weight: 600;
+//       font-size:2.2rem;
+//   }
   @media(max-width:576px){
       margin-left:25px;
   }

@@ -18,7 +18,9 @@
     "react-icons": "^4.1.0",
     "styled-components": "^5.2.1",
     "swiper": "^6.4.5",
-    "react-gsap": "^2.2.1"
+    "react-gsap": "^2.2.1",
+    "react-motion": "^0.5.2",
+    "gsap": "^3.6.0"
   },
   "license": "MIT",
   "devDependencies": {
