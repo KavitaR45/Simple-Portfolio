@@ -60,6 +60,9 @@ export default function Project({link, subtitle, title, desc, img, flexDirection
   margin:80px 0;
   @media(max-width:992px){
       margin:10px 0;
+      .text-wrap{
+        text-align:left !important;
+      }
   }
   `
 
@@ -70,7 +73,7 @@ export default function Project({link, subtitle, title, desc, img, flexDirection
                 <Col style={{ margin: "20px 0" }} xs={21} sm={22} lg={12}>
                     <Img><img className="img-class" alt="project-img" src={img} /> </Img>
                 </Col>
-                <Col xs={21} sm={22} lg={12} style={{ textAlign: `${textAlign ? "left" : "right"}`, margin: "20px 0", zIndex: "5", position: "relative" }}>
+                <Col xs={21} sm={22} lg={12} className='text-wrap' style={{ textAlign: `${textAlign ? "left" : "right"}`, margin: "20px 0", zIndex: "5", position: "relative" }}>
                     <p style={{ color: "#64ffda", marginBottom: "5px" }}>{subtitle}</p>
                     <Title>{title}</Title>
                     <DescSection className="para-text">{desc}</DescSection>
