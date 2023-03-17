@@ -13,12 +13,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <html lang="en">
           <title>Kavita Rawat | Front-end Developer & Freelancer Portfolio</title>
           <meta name="description" content="As a skilled front-end developer, I create visually stunning, responsive designs. Check out my work and let's collaborate to bring your project to life." />
           <link rel="icon" href="/images/logo.svg" />
           <link rel="canonical" href="https://webwizardry.netlify.app/" />
-        </html>
       </Head>
       <Header />
       {/* Banner Section */}
