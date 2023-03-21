@@ -7,6 +7,7 @@ import Project from "../components/Project"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Head from "next/head"
+import Slides from "../components/Slides"
 
 export default function Home() {
 
@@ -27,10 +28,12 @@ export default function Home() {
       </section>
       <section id="work" style={{ padding: "50px 0" }}>
         <SectionHeading section={2} title={"Some Things I’ve Built"} />
+        <Slides>
         <Project link={"https://syncmedia.io/"} technology={"NextJs , React , ThreeJs , Parallax , ThemeUI"} img={"/images/project/sync.png"} desc={"A website designed for an advertising agency, featuring captivating animations that respond to user interaction. Parallax and reveal effects are incorporated to enhance the visual experience, while Three.js is utilized to create a wave animation in the banner."} subtitle={"Featured Project"} title={"Sync Media"} />
         <Project link={"https://blockbuster-review.netlify.app/"} technology={"React , NextJs , AntDesign , API"} flexDirection textAlign img={"/images/project/movie.png"} desc={"A movie review website using NEXT Js, which is styled using AntDesign and styled components. To retrieve movie data, I have used 'The Movie Database API'. This website has an extensive search feature, and also provides a detailed page where one can read the movie's overview."} subtitle={"Featured Project"} title={"Block Buster Film Review"} />
         <Project link={"https://www.parrotcrow.in/"} technology={"Wordpress , Elementor , Woocommerce, Multisite"} img={"/images/project/ecom.png"} desc={"An e-commerce site for fashion-conscious parents and their little ones. Built on WordPress with Elementor and WooCommerce, it's a modern and professional store with multisite options for B2B and B2C customers, providing a seamless shopping experience."} subtitle={"Featured Project"} title={"Parrot Crow"} />
         <Project link={"https://webify.neuralcms.ai/"} technology={"NextJs, ParticleJs, React, Material UI"} flexDirection textAlign img={"/images/project/landing.png"} desc={"A professionally designed layout using Next.js with a banner created using Particle.js. For styling, I utilized Material UI, resulting in a polished and modern look. The site includes seamless navigation, a swiper, and a professional web page."} subtitle={"Featured Project"} title={"Webify"} />
+        </Slides>
       </section>
       <section id="contact" style={{ padding: "50px 0" }}>
         <SectionHeading section={3} title={"Get In Touch"} />
