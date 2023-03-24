@@ -31,6 +31,10 @@ body section {
     padding-right: 25px !important;
     padding-left: 25px !important;
   }
+  #about,#contact{
+    padding-right: 45px !important;
+    padding-left: 45px !important;
+  }
 }
 
 a {
