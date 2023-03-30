@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import { Row, Col, Button } from "antd"
 import styled from "styled-components"
 
@@ -20,17 +20,6 @@ export default function Contact({ desc, }) {
       width:45%;
   }
   `
-    const Img = styled.img`
-  width:100%;
-  border-radius:4px;
-  @media(max-width:576px){
-      width:70%;
-      display:block;
-      margin:20px auto 0 auto;
-      
-  }
-
-  `
     const Form = styled.form`
   input,textarea{
     background: transparent;
@@ -47,6 +36,27 @@ export default function Contact({ desc, }) {
   }
   `
 
+  function encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
+  const handleSubmit = (event) => {
+    console.log("event", event)
+    event.preventDefault()
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "contactForm",
+        "name": event.target.elements.name.value,
+        "email": event.target.elements.email.value,
+        "phone": event.target.elements.phone.value,
+        "msg": event.target.elements.msg.value,
+      })
+    }).then(() => { document.getElementById("myForm").reset() }).catch(error => alert(error))
+  }
 
     return (
         <>
@@ -55,7 +65,7 @@ export default function Contact({ desc, }) {
                     <DescSection className="para-text">{desc}</DescSection>
                 </Col>
                 <Col xs={21} sm={10} lg={10}>
-                    <Form id="myForm" netlify="true" name="contactForm" method="POST" data-netlify="true" >
+                    <Form id="myForm" netlify="true" name="contactForm" method="POST" data-netlify="true" onSubmit={handleSubmit}>
                         <input type="hidden" name="form-name" value="contactForm" />
                         <input title="Name should not contains any numeric letters" pattern="[A-Za-z ]{1,32}" placeholder="Name" label="Name" type="text" name="name" required />
                         <input title="Please enter a valid email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" label="Email" type="mail" name="email" required />
