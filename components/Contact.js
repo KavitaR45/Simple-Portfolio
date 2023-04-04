@@ -65,7 +65,7 @@ export default function Contact({ desc, }) {
                     <DescSection className="para-text">{desc}</DescSection>
                 </Col>
                 <Col xs={21} sm={10} lg={10}>
-                    <Form id="myForm" netlify="true" name="contactForm" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                    <Form name="contactForm" action='https://submit-form.com/nZqVqTKP'>
                         <input type="hidden" name="form-name" value="contactForm" />
                         <input title="Name should not contains any numeric letters" pattern="[A-Za-z ]{1,32}" placeholder="Name" label="Name" type="text" name="name" required />
                         <input title="Please enter a valid email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" label="Email" type="mail" name="email" required />
